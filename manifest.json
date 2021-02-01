@@ -1,72 +1,64 @@
 {
-    "manifest_version": 2,
-    "version": "0.8.4",
-    "name": "Shiori",
-    "author": "Radhi Fadlillah",
-    "description": "Web extension for Shiori, a simple bookmark manager.",
-    "homepage_url": "https://github.com/go-shiori/shiori-web-ext",
-    "icons": {
-        "48": "icons/icon-48.png",
-        "96": "icons/icon-96.png"
-    },
+  "manifest_version": 2,
+  "version": "0.8.4",
+  "name": "Shiori",
+  "author": "Radhi Fadlillah",
+  "description": "Web extension for Shiori, a simple bookmark manager.",
+  "homepage_url": "https://github.com/go-shiori/shiori-web-ext",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
 
-    "permissions": [
-        "<all_urls>",
-        "tabs",
-        "storage",
-        "bookmarks"
-    ],
+  "permissions": ["<all_urls>", "tabs", "storage", "bookmarks"],
 
-    "background": {
-        "scripts": [
-            "js/browser-polyfill.js",
-            "js/background-script.js"
-        ]
-    },
+  "background": {
+    "scripts": [
+      "js/browser-polyfill.js",
+      "js/background-script.js",
+      "js/fix-slow-inputs.js"
+    ]
+  },
 
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "css": ["css/dialog.css"],
-        "js": [
-            "js/browser-polyfill.js",
-            "js/content-script.js"
-        ]
-    }],
-
-    "options_ui": {
-        "page": "view/options.html",
-        "browser_style": true,
-        "chrome_style": true
-    },
-    
-    "browser_action": {
-        "browser_style": true,
-        "default_title": "Shiori",
-        "default_popup": "view/popup.html",
-        "default_icon": {
-            "16": "icons/action-default-16.png",
-            "32": "icons/action-default-32.png",
-            "64": "icons/action-default-64.png"
-        },
-        "theme_icons": [{
-            "dark": "icons/action-dark-16.png",
-            "light": "icons/action-light-16.png",
-            "size": 16
-        }, {
-            "dark": "icons/action-dark-32.png",
-            "light": "icons/action-light-32.png",
-            "size": 32
-        }, {
-            "dark": "icons/action-dark-64.png",
-            "light": "icons/action-light-64.png",
-            "size": 64
-        }]
-    },
-
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "{c6e8bd66-ebb4-4b63-bd29-5ef59c795901}",
-            "update_url": "https://raw.githubusercontent.com/go-shiori/shiori-web-ext/master/updates.json"
-        }
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["css/dialog.css"],
+      "js": ["js/browser-polyfill.js", "js/content-script.js"]
     }
+  ],
+
+  "options_ui": {
+    "page": "view/options.html",
+    "browser_style": true,
+    "chrome_style": true
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Shiori",
+    "default_popup": "view/popup.html",
+    "default_icon": {
+      "16": "icons/action-default-16.png",
+      "32": "icons/action-default-32.png",
+      "64": "icons/action-default-64.png"
+    },
+    "theme_icons": [
+      {
+        "dark": "icons/action-dark-16.png",
+        "light": "icons/action-light-16.png",
+        "size": 16
+      },
+      {
+        "dark": "icons/action-dark-32.png",
+        "light": "icons/action-light-32.png",
+        "size": 32
+      },
+      {
+        "dark": "icons/action-dark-64.png",
+        "light": "icons/action-light-64.png",
+        "size": 64
+      }
+    ]
+  }
 }

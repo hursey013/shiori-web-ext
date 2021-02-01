@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Pop Up - Shiori</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/source-sans-pro.min.css">
-    <link rel="stylesheet" href="../css/fontawesome.min.css">
-    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/source-sans-pro.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../css/popup.css" />
+    <script
+      type="application/javascript"
+      src="../js/fix-slow-inputs.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="../js/browser-polyfill.js"
+    ></script>
+  </head>
 
-    <script type="application/javascript" src="../js/browser-polyfill.js"></script>
-</head>
-
-<body>
+  <body>
     <div id="popup-box">
-        <div id="logo">
-            <img src="../icons/icon.svg">
-        </div>
-        <p id="txt-status">Save to Shiori</p>
-        <div id="menu-box">
-            <a id="btn-libraries" href="#">View libraries</a>
-            <p>&bull;</p>
-            <a id="btn-remove" href="#">Remove bookmark</a>
-        </div>
-        <div id="input-box">
-            <input id="input-tags" type="text" placeholder="Add tags" tabindex="1">
-            <a id="btn-save" title="Save"><i class="fas fa-fw fa-save" aria-label="Save"></i></a>
-            <a id="loading-sign" style="display: none"><i class="fas fa-fw fa-spinner fa-spin"></i></a>
-        </div>
+      <div id="logo">
+        <img src="../icons/icon.svg" />
+      </div>
+      <p id="txt-status">Save to Shiori</p>
+      <div id="menu-box">
+        <a id="btn-libraries" href="#">View libraries</a>
+        <p>&bull;</p>
+        <a id="btn-remove" href="#">Remove bookmark</a>
+      </div>
+      <div id="input-box">
+        <input
+          id="input-tags"
+          type="text"
+          placeholder="Add tags"
+          tabindex="1"
+        />
+        <a id="btn-save" title="Save"
+          ><i class="fas fa-fw fa-save" aria-label="Save"></i
+        ></a>
+        <a id="loading-sign" style="display: none"
+          ><i class="fas fa-fw fa-spinner fa-spin"></i
+        ></a>
+      </div>
     </div>
 
     <script type="application/javascript" src="../js/popup.js"></script>
-</body>
-
+  </body>
 </html>
