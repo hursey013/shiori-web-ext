@@ -30,20 +30,15 @@
         <p>&bull;</p>
         <a id="btn-remove" href="#">Remove bookmark</a>
       </div>
-      <div id="input-box">
-        <input
-          id="input-tags"
-          type="text"
-          placeholder="Add tags"
-          tabindex="1"
-        />
-        <a id="btn-save" title="Save"
-          ><i class="fas fa-fw fa-save" aria-label="Save"></i
-        ></a>
-        <a id="loading-sign" style="display: none"
-          ><i class="fas fa-fw fa-spinner fa-spin"></i
-        ></a>
-      </div>
+      <form id="input-box">
+        <input id="input-tags" type="text" placeholder="Add tags" />
+        <button type="submit" id="btn-save" title="Save">
+          <i class="fas fa-fw fa-save" aria-label="Save"></i>
+        </button>
+        <button type="submit" id="loading-sign" style="display: none">
+          <i class="fas fa-fw fa-spinner fa-spin"></i>
+        </button>
+      </form>
     </div>
 
     <script type="application/javascript" src="../js/popup.js"></script>

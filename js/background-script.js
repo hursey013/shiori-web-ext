@@ -182,8 +182,6 @@ async function updateIcon() {
     var tab = await getCurrentTab(),
       bookmark = await getBookmark(tab.url);
 
-    console.log(bookmark);
-
     if (bookmark)
       icon.path = {
         16: "icons/action-bookmarked-16.png",
